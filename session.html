@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Session</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Poppins,system-ui;
+}
+
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#1f3c88,#6a11cb);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.session{
+  width:95%;
+  height:90vh;
+  background:#f9f9f9;
+  border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+  display:flex;
+  overflow:hidden;
+}
+
+/* LEFT VIDEO */
+.video-panel{
+  width:280px;
+  background:#111;
+  color:#fff;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.video{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#444;
+  margin-bottom:10px;
+}
+
+.name{
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.controls{
+  margin-top:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.controls button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.mute{background:#555;color:#fff;}
+.cam{background:#555;color:#fff;}
+.end{background:#e53935;color:#fff;}
+
+/* CENTER WHITEBOARD */
+.board{
+  flex:1;
+  background:#fff;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+}
+
+.board h3{
+  margin:0 0 10px;
+}
+
+.whiteboard{
+  flex:1;
+  border-radius:12px;
+  border:2px dashed #ccc;
+  background:#fafafa;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#aaa;
+  font-size:18px;
+}
+
+/* RIGHT NOTES */
+.notes{
+  width:280px;
+  background:#f1f3f8;
+  padding:20px;
+}
+
+.notes h4{
+  margin-top:0;
+}
+
+.notes p{
+  font-size:14px;
+  color:#444;
+  line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="session">
+
+  <!-- VIDEO -->
+  <div class="video-panel">
+    <div class="video"></div>
+    <div class="name">Anjali S.</div>
+
+    <div class="controls">
+      <button class="mute">Mute Mic</button>
+      <button class="cam">Turn Off Camera</button>
+      <button class="end" onclick="window.location.href='feedback.html'">End Session</button>
+    </div>
+  </div>
+
+  <!-- WHITEBOARD -->
+  <div class="board">
+    <h3>Conversation with Anjali S.</h3>
+    <div class="whiteboard">
+      ✏️ Live Whiteboard (Math / Notes)
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="notes">
+    <h4>English Grammar</h4>
+    <p>
+      • Sentence structure<br>
+      • Tenses overview<br>
+      • Practice examples<br>
+      • Homework discussion
+    </p>
+  </div>
+
+</div>
+ 
+</body>
+</html>

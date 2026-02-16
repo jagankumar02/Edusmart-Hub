@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Complete</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Poppins,system-ui;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card{
+  width:100%;
+  max-width:520px;
+  background:rgba(255,255,255,0.96);
+  border-radius:22px;
+  padding:30px 28px 34px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.35);
+}
+
+.title{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.subtitle{
+  font-size:14px;
+  color:#555;
+  margin-bottom:22px;
+}
+
+/* Stars */
+.stars{
+  display:flex;
+  gap:10px;
+  font-size:32px;
+  margin-bottom:20px;
+  cursor:pointer;
+}
+
+.star{
+  color:#ddd;
+}
+
+.star.active{
+  color:#f4c430;
+}
+
+/* Textarea */
+textarea{
+  width:100%;
+  height:90px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  padding:14px;
+  font-size:14px;
+  resize:none;
+  margin-bottom:20px;
+}
+
+/* Buttons */
+.actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.btn{
+  padding:12px 28px;
+  border:none;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.submit{
+  background:#3db7ff;
+  color:#fff;
+  box-shadow:0 10px 25px rgba(61,183,255,.45);
+}
+
+.skip{
+  background:none;
+  color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="title">Session Complete!</div>
+  <div class="subtitle">
+    Please provide feedback for <b>Anjali S.</b>
+  </div>
+
+  <!-- Stars -->
+  <div class="stars" id="stars">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+  </div>
+
+  <textarea placeholder="Share your experience... (optional)"></textarea>
+
+  <div class="actions">
+    <button class="btn submit" onclick="submitFeedback()" onclick="window.location.href='feedback.html'">Submit Feedback</button>
+    <button class="btn skip" onclick="window.location.href='homepage.html'">Skip</button>
+  </div>
+</div>
+
+<script>
+const stars = document.querySelectorAll('.star');
+
+stars.forEach((star,index)=>{
+  star.addEventListener('click',()=>{
+    stars.forEach((s,i)=>{
+      s.classList.toggle('active', i <= index);
+    });
+  });
+});
+
+function submitFeedback(){
+  alert("Feedback submitted 🎉");
+  window.location.href="reward.html";
+}
+
+function goDashboard(){
+  window.location.href="dashboard.html";
+}
+</script>
+ 
+
+</body>
+</html>

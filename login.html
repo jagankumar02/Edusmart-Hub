@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join / Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+
+    .login-card h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 26px;
+    }
+
+    .input {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .btn-email {
+      width: 100%;
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      background: #3db7ff;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 8px;
+      box-shadow: 0 10px 25px rgba(61,183,255,0.4);
+    }
+
+    .divider {
+      text-align: center;
+      margin: 18px 0;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .btn-google {
+      width: 100%;
+      padding: 12px;
+      border-radius: 14px;
+      border: none;
+      background: #fff;
+      color: #333;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-google img {
+      width: 20px;
+    }
+
+    .footer {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <h2>Join Login!</h2>
+
+    <input class="input" type="email" placeholder="Email" />
+    <input class="input" type="password" placeholder="Password" />
+
+    <button class="btn-email" onclick="window.location.href='Profile.html'">Continue with Email</button>
+
+    <div class="divider">OR</div>
+
+    <button class="btn-google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      Continue with Google
+    </button>
+
+    <div class="footer">
+      Already have an account? <a onclick="switchToLogin()">Login</a>
+    </div>
+  </div>
+
+  <script>
+  function switchToLogin() {
+    document.querySelector("h2").innerText = "Login";
+
+    document.querySelector(".btn-email").innerText = "Login with Email";
+
+    document.querySelector(".footer").innerHTML =
+      'New here? <a onclick="switchToSignup()">Join / Sign up</a>';
+  }
+
+  function switchToSignup() {
+    document.querySelector("h2").innerText = "Join / Login!";
+
+    document.querySelector(".btn-email").innerText = "Continue with Email";
+
+    document.querySelector(".footer").innerHTML =
+      'Already have an account? <a onclick="switchToLogin()">Login</a>';
+  }
+</script>
+ 
+
+</body>
+</html>
