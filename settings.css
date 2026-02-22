@@ -1,0 +1,61 @@
+*{
+  box-sizing:border-box;
+  font-family:"Poppins", system-ui, Arial;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.settings-card{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  border-radius:22px;
+  padding:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.3);
+}
+
+.settings-card h2{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+label{
+  font-size:14px;
+  font-weight:600;
+  margin-top:12px;
+  display:block;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  margin-top:6px;
+}
+
+.toggle{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:14px;
+}
+
+button{
+  width:100%;
+  margin-top:22px;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:#6a11cb;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+}

@@ -108,3 +108,8 @@
     @media(max-width:700px){
       .board{padding:22px;}
     }
+    .btn-mentor{
+      background: #fe5b4f;
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(79,172,254,0.4);
+    }

@@ -6,6 +6,7 @@
   <title>Home Screen</title>
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="ai.css">
+    <link rel="stylesheet" href="display.css">
   <style>
     *{
       box-sizing:border-box;
@@ -55,22 +56,37 @@
       font-weight:600;
       cursor:pointer;
     }
+            .ai{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: aqua;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+    .ai:hover{
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-    <header class="navbar">
-  <div class="nav-logo">Edusmart Hub</div>
+        <!-- TOP NAVBAR -->
+<div class="topbar">
+  <div class="logo">Edusmart Hub</div>
+   <button class="ai" onclick="window.location.href='ai-chat.html'">AI Help</button>
 
-  <nav class="nav-links">
-    <a href="homepage.html">Home</a>
-    <a href="reward.html">Dashboard</a>
-   <a href="ai-chat.html">AI Chat</a>
-  </nav>
+  <div class="profile" onclick="toggleProfile()">
+    <img src="https://i.pravatar.cc/40" alt="User">
+    <span class="username">user</span>
 
-  <button class="logout-btn" onclick="window.location.href='login.html'">
-    Logout
-  </button>
-</header>
+    <div class="profile-menu" id="profileMenu">
+      <a href="userinfo.html">My Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+</div>
 
 <div class="board">
 
@@ -162,6 +178,7 @@
     <div class="actions">
       <button class="btn btn-back"onclick="window.location.href='Profile.html'">Back</button>
       <button class="btn btn-next" onclick="window.location.href='matchfound.html'">Next</button>
+      <button class="btn btn-mentor" onclick="window.location.href='mentor.html'">Paid mentor</button>
     </div>
   </div>
 </div>
@@ -198,6 +215,7 @@
 </div>
  
  <script src="ai.js"></script>
+ <script src="profile.js"></script>
 
 </body>
 </html>

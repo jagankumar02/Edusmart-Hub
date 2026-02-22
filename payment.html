@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<div class="payment-box">
+  <h1>💳 Secure Payment</h1>
+
+  <div class="summary">
+    <p><strong>Mentor:</strong> <span id="mentorName"></span></p>
+    <p><strong>Session Fee:</strong> ₹25<span id="price"></span></p>
+  </div>
+
+  <input type="text" placeholder="Card Holder Name">
+  <input type="text" placeholder="Card Number">
+  
+  <div class="row">
+    <input type="text" placeholder="MM/YY">
+    <input type="text" placeholder="CVV">
+  </div>
+
+  <button onclick="payNow()">Pay Now</button>
+  <button class="start-btn"  onclick="window.location.href='mentor.html'">Cencal payment</button>
+
+  <p class="note">* Demo payment for hackathon</p>
+</div>
+
+<script src="payment.js"></script>
+</body>
+</html>

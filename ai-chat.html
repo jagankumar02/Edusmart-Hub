@@ -102,6 +102,18 @@
     .chat-input button:hover{
       opacity:0.9;
     }
+        .ai{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: rgb(246, 28, 8);
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+    .ai:hover{
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -110,7 +122,9 @@
   <div class="chat-container">
     <div class="chat-header">
       🤖 AI Chat Assistant
+       <button class="ai" onclick="window.location.href='homepage.html'">Back to home</button>
     </div>
+     
 
     <div class="chat-messages" id="chatBox">
       <div class="msg bot">
