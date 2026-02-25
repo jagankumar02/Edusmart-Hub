@@ -9,7 +9,12 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background:#0246f2;
+   margin: 0;
+  padding: 0;
+  background-image: url("background.jpg");
+  background-size: cover;      
+  background-repeat: no-repeat;  
+  background-position: center; 
 }
 
 .login-box{
